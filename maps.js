@@ -1,5 +1,3 @@
-// import { MarkerClusterer } from "@googlemaps/markerclusterer"; 
-
 function initMap() {
     var map = new
         google.maps.Map(document.getElementById("map"), {
@@ -28,14 +26,8 @@ function initMap() {
         });
     });
 
-    const MarkerClusterer = new MarkerClusterer({ markers, map });
+    // the cluster script is loaded in interests.html
+    const MarkerClusterer = new markerClusterer.MarkerClusterer({ markers, map });
 }
-
-// var marker = new google.maps.Marker({
-//     position: { lat: 40.785091, lng: -73.968285 },
-//     map: map
-// });
-
-// }
 
 initMap();
