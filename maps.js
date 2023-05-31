@@ -22,12 +22,14 @@ function initMap() {
     var markers = locations.map(function (location, i) {
         return new google.maps.Marker({
             position: location,
-            label: labels[i % labels.length]
+            label: labels[i % labels.length],
+            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
         });
     });
 
     // the cluster script is loaded in interests.html
-    const MarkerClusterer = new markerClusterer.MarkerClusterer({ markers, map });
+    new markerClusterer.MarkerClusterer({ markers, map });
+
 }
 
 initMap();
